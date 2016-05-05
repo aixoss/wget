@@ -48,7 +48,11 @@ as that of the covered work.  */
 #include "hash.h"
 #include "ssl.h"
 
+#ifdef _AIX
+#include <fcntl.h>
+#else
 #include <sys/fcntl.h>
+#endif
 
 #ifdef WIN32
 # include "w32sock.h"
